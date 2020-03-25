@@ -1,0 +1,103 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/roboto-light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/roboto-medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto-bold.woff2') format('woff2');
+}
+
+/* Body */
+
+body {
+    font-family: 'Roboto';
+}
+
+/* Sticky footer */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body main {
+    flex: 1;
+}
+
+/* Active links */
+
+header a.active {
+    @apply text-gray-900;
+}
+
+/* Content */
+
+#content h1 {
+    @apply text-3xl font-bold;
+}
+
+#content h2 {
+    @apply text-2xl font-bold;
+}
+
+#content h3 {
+    @apply text-xl font-bold;
+}
+
+#content p {
+    @apply my-2;
+}
+
+#content ul {
+    @apply list-inside list-disc ml-8;
+}
+
+#content li {
+    @apply my-2;
+}
+
+#content .kg-gallery-row {
+    @apply flex
+}
+
+#content .kg-gallery-image {
+    @apply p-2
+}
+
+#content a {
+    @apply underline
+}
+
+#content .kg-bookmark-container {
+    @apply border border-solid flex
+}
+
+#content .kg-bookmark-container .kg-bookmark-icon {
+    @apply w-6
+}

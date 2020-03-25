@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <header class="flex bg-white shadow-md fixed top-0 inset-x-0 z-100 h-16 items-center z-10">
+        <div class="container m-auto flex items-center justify-between flex-wrap px-4 lg:px-0">
+            <a href="/" class="text-black hover:text-black">
+                <div class="flex items-center">
+                    <img src="{{@site.logo}}" alt="logo" class="rounded-full w-12" />
+                    <div class="ml-2">
+                        <div class="font-bold leading-none">{{@site.title}}</div>
+                        <div class="text-sm leading-none">{{@site.description}}</div>
+                    </div>
+                </div>
+            </a>
+            {{navigation}}
+        </div>
+    </header>
+
+    <main class="bg-white">{{{body}}}</main>
+
+    <footer>
+        <div class="container px-5 lg:px-0 m-auto flex items-center justify-between flex-wrap py-10 flex-grow">
+            <span class="flex-grow">© {{date format="YYYY"}} {{@site.title}}</span>
+            <nav>
+                <span class="flex">
+                    {{navigation type="secondary"}}
+                    {{#if @site.twitter }}
+                    <a href="{{twitter_url}}" target="_blank">
+                        <img src="/assets/images/twitter.svg" alt="twitter" class="h-6 w-6 mr-2" />
+                    </a>
+                    {{/if}}
+                    {{#if @site.facebook}}
+                    <a href="{{facebook_url}}" target="_blank">
+                        <img src="/assets/images/facebook.svg" alt="youtube" class="h-6 w-6 mr-2" />
+                    </a>
+                    {{/if}}
+                </span>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="{{asset "built/script.js"}}"></script>
+
+    {{ghost_foot}}
+</body>
+</html>

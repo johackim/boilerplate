@@ -1,0 +1,17 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<article class="w-1/3 px-10 pb-10">
+    <a href="{{url}}">
+        {{#if feature_image}}
+            <img src="{{img_url feature_image size="m"}}" alt="{{title}}" />
+        {{/if}}
+        <div class="gh-card-content">
+            <span class="gh-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+            <h2 class="gh-card-title">{{title}}</h2>
+            <p>{{excerpt}}</p>
+            <strong>Voir l'article</strong>
+        </div>
+    </a>
+</article>
