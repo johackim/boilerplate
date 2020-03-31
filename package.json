@@ -7,8 +7,8 @@
     },
     "scripts": {
         "start": "docker run --rm -e NODE_ENV=development -v $PWD:/var/lib/ghost/content/themes/casper -p 2368:2368 ghost:alpine",
-        "dev": "gulp",
-        "zip": "gulp zip",
+        "dev": "webpack --watch --mode development",
+        "build": "webpack --mode production",
         "test": "gscan ."
     },
     "keywords": [
@@ -18,21 +18,22 @@
         "tailwindcss"
     ],
     "devDependencies": {
-        "autoprefixer": "9.7.3",
-        "cssnano": "4.1.10",
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.1.0",
+        "css-loader": "^3.4.2",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb": "^18.1.0",
+        "eslint-plugin-import": "^2.20.2",
         "gscan": "3.3.3",
-        "gulp": "4.0.2",
-        "gulp-livereload": "4.0.1",
-        "gulp-postcss": "8.0.0",
-        "gulp-sourcemaps": "2.6.5",
-        "gulp-uglify": "3.0.2",
-        "gulp-util": "3.0.8",
-        "gulp-watch": "5.0.1",
-        "gulp-zip": "5.0.0",
-        "postcss-color-function": "4.1.0",
-        "postcss-custom-properties": "9.1.1",
-        "postcss-easy-import": "3.0.0",
-        "tailwindcss": "^1.2.0"
+        "mini-css-extract-plugin": "^0.9.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "postcss-loader": "^3.0.0",
+        "tailwindcss": "^1.2.0",
+        "url-loader": "^4.0.0",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
     },
     "browserslist": [
         "defaults"
@@ -59,5 +60,6 @@
                 "width": 2000
             }
         }
-    }
+    },
+    "license": "GPL-3.0"
 }
