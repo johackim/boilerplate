@@ -35,22 +35,20 @@
     <main class="bg-white">{{{body}}}</main>
 
     <footer>
-        <div class="container px-5 lg:px-0 m-auto flex items-center justify-between flex-wrap py-10 flex-grow">
-            <span class="flex-grow">© {{date format="YYYY"}} {{@site.title}}</span>
-            <nav>
-                <span class="flex">
-                    {{navigation type="secondary"}}
-                    {{#if @site.twitter }}
-                    <a href="{{twitter_url}}" target="_blank">
-                        <img src="/assets/images/twitter.svg" alt="twitter" class="h-6 w-6 mr-2" />
-                    </a>
-                    {{/if}}
-                    {{#if @site.facebook}}
-                    <a href="{{facebook_url}}" target="_blank">
-                        <img src="/assets/images/facebook.svg" alt="youtube" class="h-6 w-6 mr-2" />
-                    </a>
-                    {{/if}}
-                </span>
+        <div class="container m-auto px-5 lg:px-0 py-10 flex items-center justify-between flex-wrap">
+            <div>© {{date format="YYYY"}} {{@site.title}}</div>
+            <nav class="flex">
+                {{navigation type="secondary"}}
+                {{#if @site.twitter }}
+                <a href="{{twitter_url}}" target="_blank">
+                    <img src="/assets/images/twitter.svg" alt="twitter" class="h-6 w-6 mr-2" />
+                </a>
+                {{/if}}
+                {{#if @site.facebook}}
+                <a href="{{facebook_url}}" target="_blank">
+                    <img src="/assets/images/facebook.svg" alt="youtube" class="h-6 w-6 mr-2" />
+                </a>
+                {{/if}}
             </nav>
         </div>
     </footer>
