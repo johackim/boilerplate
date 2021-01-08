@@ -15,7 +15,7 @@
     "scripts": {
         "build": "webpack --mode production",
         "dev": "webpack --watch --mode development",
-        "start": "docker run --rm -e NODE_ENV=development -v $PWD:/var/lib/ghost/content/themes/casper -p 2368:2368 ghost:alpine",
+        "start": "docker run --rm -e NODE_ENV=development -v ${PWD}/content/data:/var/lib/ghost/content/data -v $PWD:/var/lib/ghost/content/themes/casper -p 2368:2368 ghost:alpine",
         "test": "gscan ."
     },
     "config": {

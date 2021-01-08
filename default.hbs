@@ -41,12 +41,12 @@
                 {{navigation type="secondary"}}
                 {{#if @site.twitter }}
                 <a href="{{twitter_url}}" target="_blank">
-                    <img src="/assets/images/twitter.svg" alt="twitter" class="h-6 w-6 mr-2" />
+                    <img src="{{asset "assets/images/twitter.svg"}}" alt="twitter" class="h-6 w-6 mr-2" />
                 </a>
                 {{/if}}
                 {{#if @site.facebook}}
                 <a href="{{facebook_url}}" target="_blank">
-                    <img src="/assets/images/facebook.svg" alt="youtube" class="h-6 w-6 mr-2" />
+                    <img src="{{asset "assets/images/facebook.svg"}}" alt="youtube" class="h-6 w-6 mr-2" />
                 </a>
                 {{/if}}
             </nav>
