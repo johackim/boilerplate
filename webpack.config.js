@@ -4,9 +4,11 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './assets/js/script.js',
+    entry: {
+        script: './assets/js/script.js',
+    },
     output: {
-        filename: 'script.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'assets/built/'),
     },
     module: {
@@ -23,24 +25,25 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                loaders: [
+                use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    { loader: 'css-loader' },
                     {
                         loader: 'postcss-loader',
                         options: {
-                            ident: 'postcss',
-                            plugins: [
-                                require('tailwindcss'), // eslint-disable-line
-                                require('autoprefixer'), // eslint-disable-line
-                            ],
+                            postcssOptions: {
+                                plugins: [
+                                    require('tailwindcss'), // eslint-disable-line
+                                    require('autoprefixer'), // eslint-disable-line
+                                ],
+                            },
                         },
                     },
                 ],
             },
             {
                 test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
-                loader: ['url-loader'],
+                use: { loader: 'url-loader' },
             },
         ],
     },

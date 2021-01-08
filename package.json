@@ -1,45 +1,24 @@
 {
     "name": "boilerplate",
     "version": "0.1.0",
-    "author": {
-        "name": "johackim",
-        "email": "contact@johackim.com"
-    },
-    "scripts": {
-        "start": "docker run --rm -e NODE_ENV=development -v $PWD:/var/lib/ghost/content/themes/casper -p 2368:2368 ghost:alpine",
-        "dev": "webpack --watch --mode development",
-        "build": "webpack --mode production",
-        "test": "gscan ."
-    },
     "keywords": [
         "ghost",
         "theme",
         "ghost-theme",
         "tailwindcss"
     ],
-    "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@babel/preset-env": "^7.9.0",
-        "babel-eslint": "^10.1.0",
-        "babel-loader": "^8.1.0",
-        "css-loader": "^3.4.2",
-        "eslint": "^6.8.0",
-        "eslint-config-airbnb": "^18.1.0",
-        "eslint-plugin-import": "^2.20.2",
-        "gscan": "3.3.3",
-        "mini-css-extract-plugin": "^0.9.0",
-        "optimize-css-assets-webpack-plugin": "^5.0.3",
-        "postcss-loader": "^3.0.0",
-        "tailwindcss": "^1.2.0",
-        "url-loader": "^4.0.0",
-        "webpack": "^4.42.1",
-        "webpack-cli": "^3.3.11"
+    "license": "GPL-3.0",
+    "author": {
+        "name": "johackim",
+        "email": "contact@johackim.com"
     },
-    "browserslist": [
-        "defaults"
-    ],
+    "scripts": {
+        "build": "webpack --mode production",
+        "dev": "webpack --watch --mode development",
+        "start": "docker run --rm -e NODE_ENV=development -v $PWD:/var/lib/ghost/content/themes/casper -p 2368:2368 ghost:alpine",
+        "test": "gscan ."
+    },
     "config": {
-        "posts_per_page": 15,
         "image_sizes": {
             "xxs": {
                 "width": 30
@@ -59,7 +38,31 @@
             "xl": {
                 "width": 2000
             }
-        }
+        },
+        "posts_per_page": 15
     },
-    "license": "GPL-3.0"
+    "browserslist": [
+        "defaults"
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@tailwindcss/postcss7-compat": "^2.0.2",
+        "autoprefixer": "^9.8.6",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^5.0.1",
+        "eslint": "^7.17.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-plugin-import": "^2.22.1",
+        "gscan": "3.6.1",
+        "mini-css-extract-plugin": "^1.3.3",
+        "optimize-css-assets-webpack-plugin": "^5.0.4",
+        "postcss": "^7.0.35",
+        "postcss-loader": "^4.1.0",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.11.1",
+        "webpack-cli": "^4.3.1"
+    }
 }

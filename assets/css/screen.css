@@ -101,3 +101,15 @@ header a.active {
 #content .kg-bookmark-container .kg-bookmark-icon {
     @apply w-6
 }
+
+#content .kg-width-wide,
+#content .kg-width-full,
+#content .kg-gallery-container,
+#content .kg-bookmark-card,
+#content .kg-bookmark-content,
+#content .kg-bookmark-metadata,
+#content .kg-bookmark-thumbnail,
+#content .kg-bookmark-publisher,
+#content .kg-bookmark-title,
+#content .kg-bookmark-description,
+#content .kg-bookmark-author {}
