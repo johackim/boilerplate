@@ -50,9 +50,17 @@ body main {
     flex: 1;
 }
 
-/* Active links */
+/* links */
 
 header a.active {
+    @apply text-gray-900;
+}
+
+a {
+    @apply text-gray-600;
+}
+
+a:not(.button):hover {
     @apply text-gray-900;
 }
 

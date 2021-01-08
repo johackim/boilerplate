@@ -35,6 +35,10 @@ module.exports = {
                                 plugins: [
                                     require('tailwindcss'), // eslint-disable-line
                                     require('autoprefixer'), // eslint-disable-line
+                                    require('@fullhuman/postcss-purgecss')({ // eslint-disable-line
+                                        content: ['**/*.hbs'],
+                                        defaultExtractor: (content) => content.match(/[\w-/:.]+(?<!:)/g) || [],
+                                    }),
                                 ],
                             },
                         },
