@@ -6,13 +6,17 @@
         "clean": "gatsby clean"
     },
     "devDependencies": {
+        "autoprefixer": "^10.4.0",
         "eslint": "^8.1.0",
         "eslint-config-airbnb": "^18.2.1",
         "eslint-plugin-import": "^2.25.2",
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-react": "^7.26.1",
         "eslint-plugin-react-hooks": "^4.2.0",
-        "prettier": "^2.4.1"
+        "gatsby-plugin-postcss": "^5.1.0",
+        "postcss": "^8.3.11",
+        "prettier": "^2.4.1",
+        "tailwindcss": "^2.2.19"
     },
     "dependencies": {
         "gatsby": "^4.1.0",
