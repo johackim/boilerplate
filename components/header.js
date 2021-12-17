@@ -17,7 +17,7 @@ const Header = ({ title, links, description, logo, fixed = false }) => (
 
             <div className="grid grid-flow-col gap-4 items-center">
                 {links.map(({ name, path }) => (
-                    <Link href={path}>
+                    <Link href={path} key={name}>
                         <a className="hidden lg:inline dark:hover:text-white" activeClassName="dark:text-white" partiallyActive>
                             {name}
                         </a>

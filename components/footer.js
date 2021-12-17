@@ -8,7 +8,7 @@ const Footer = ({ links, date }) => (
         </div>
         <nav className="grid grid-flow-col gap-2 items-center">
             {links.map(({ name, path }) => (
-                <Link href={path} rel="noopener">
+                <Link href={path} key={name} rel="noopener">
                     {name}
                 </Link>
             ))}
