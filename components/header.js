@@ -17,8 +17,8 @@ const Header = ({ title, links, description, logo, fixed = false }) => (
 
             <div className="grid grid-flow-col gap-4 items-center">
                 {links.map(({ name, path }) => (
-                    <Link href={path} key={name}>
-                        <a className="hidden lg:inline dark:hover:text-white" activeClassName="dark:text-white" partiallyActive>
+                    <Link href={path} key={name} activeClassName="dark:text-white" partiallyActive>
+                        <a className="hidden lg:inline dark:hover:text-white">
                             {name}
                         </a>
                     </Link>
@@ -32,7 +32,7 @@ Header.defaultProps = {
     title: 'Title',
     fixed: false,
     description: 'Description',
-    logo: 'https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg',
+    logo: 'https://svgur.com/i/csw.svg',
     links: [{ name: 'Link 1', path: '/' }, { name: 'Link 2', path: '/' }],
 };
 
