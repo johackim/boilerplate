@@ -122,5 +122,5 @@ dist
 # Serverless Webpack directories
 .webpack/
 
-# Gatsby
-public/
+# Next
+.next
