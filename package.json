@@ -12,6 +12,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@mdx-js/loader": "^2.1.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
@@ -28,11 +30,22 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "4",
     "postcss": "^8.4.12",
     "prettier": "^2.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "storybook-tailwind-dark-mode": "^1.0.11",
     "tailwindcss": "^3.0.23"
+  },
+  "commitlint": {
+      "extends": [
+          "@commitlint/config-conventional"
+      ]
+  },
+  "husky": {
+      "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
   }
 }
