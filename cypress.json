@@ -1,0 +1,18 @@
+{
+    "fixturesFolder": false,
+    "pluginsFile": "__tests__/integration/plugins.js",
+    "integrationFolder": "__tests__/integration/",
+    "testFiles": "*.spec.js",
+    "supportFile": false,
+    "screenshotOnRunFailure": false,
+    "trashAssetsBeforeRuns": false,
+    "video": false,
+    "defaultCommandTimeout": 10000,
+    "requestTimeout": 10000,
+    "baseUrl": "http://localhost:3000",
+    "chromeWebSecurity": false,
+    "retries": {
+        "runMode": 2,
+        "openMode": 0
+    }
+}

@@ -20,6 +20,12 @@ npm run dev
 # Go to http://localhost:3000
 ```
 
+## Running the tests
+
+```bash
+npm test
+```
+
 ## License
 
 This project is licensed under the GNU GPL v3.0 - see the [LICENSE.txt](https://raw.githubusercontent.com/johackim/boilerplate/master/LICENSE.txt) file for details
