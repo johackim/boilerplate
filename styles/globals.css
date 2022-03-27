@@ -6,3 +6,13 @@
 body {
     font-family: 'Roboto';
 }
+
+/* Sticky footer */
+
+#__next {
+    @apply h-screen flex flex-col justify-between;
+}
+
+#__next main {
+    @apply flex-1;
+}
