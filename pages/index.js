@@ -1,5 +1,5 @@
-import Layout from '../components/layout';
-import Hero from '../components/hero';
+import Layout from '@components/layout';
+import Hero from '@components/hero';
 
 const Page = () => <Hero />;
 

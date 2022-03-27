@@ -14,4 +14,12 @@ module.exports = {
         },
     ],
     framework: '@storybook/react',
+    webpackFinal: async (config, { configType }) => {
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            '@components': path.resolve(__dirname, "../components"),
+            '@styles': path.resolve(__dirname, "../styles"),
+        };
+        return config;
+    },
 };

@@ -1,4 +1,4 @@
-import Button from './button';
+import Button from '@components/button';
 
 const Hero = ({ preHead, headline, subHeadline, callToAction, secondaryAction }) => (
     <section className="h-screen flex justify-center text-center items-center mx-auto">
