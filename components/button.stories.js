@@ -10,15 +10,14 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-    primary: true,
-    label: 'Button',
+    children: 'Button',
     path: '/',
 };
 
 export const Secondary = Template.bind({});
 
 Secondary.args = {
-    primary: false,
-    label: 'Button',
+    secondary: true,
+    children: 'Button',
     path: '/',
 };
