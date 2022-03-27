@@ -1,5 +1,8 @@
 ## Boilerplate
 
+[![License](https://img.shields.io/badge/license-GPL%20v3%2B-yellow.svg?style=flat-square&colorA=181C31&colorB=212839)](https://raw.githubusercontent.com/johackim/boilerplate/master/LICENSE.txt)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/johackim/boilerplate.svg?style=flat-square&colorA=181C31&colorB=212839)](https://codeclimate.com/github/johackim/boilerplate)
+
 My personal Next.js boilerplate
 
 ## Installation
