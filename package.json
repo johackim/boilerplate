@@ -39,6 +39,7 @@
     "husky": "4",
     "postcss": "^8.4.12",
     "prettier": "^2.6.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "storybook-tailwind-dark-mode": "^1.0.11",
