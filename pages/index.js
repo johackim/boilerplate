@@ -1,5 +1,5 @@
 import Layout from '@components/layout';
-import Hero from '@components/hero';
+import { Hero } from '@johackim/design-system';
 
 const Page = () => <Hero centered={false} />;
 

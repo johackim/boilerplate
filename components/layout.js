@@ -1,6 +1,4 @@
-import Header from '@components/header';
-import Footer from '@components/footer';
-import Link from '@components/link';
+import { Footer, Header, Link } from '@johackim/design-system';
 
 export default ({ children, className }) => (
     <>
